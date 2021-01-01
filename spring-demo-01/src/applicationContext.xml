@@ -16,7 +16,7 @@
 	</bean>
 
 	<!-- Define your beans here -->
-	<bean id="myCoach" class="org.example.springdemo.TrackCoach">
+	<bean id="myCoach" class="org.example.springdemo.BaseballCoach">
 	</bean>
 
 </beans>
