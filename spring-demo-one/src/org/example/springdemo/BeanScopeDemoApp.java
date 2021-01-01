@@ -20,6 +20,9 @@ public class BeanScopeDemoApp {
     System.out.println("Pointing to the same object: " + result);
     System.out.println("Memory location for theCoach: " + theCoach);
     System.out.println("Memory location for alphaCoach: " + alphaCoach);
+
+    // close the context
+    context.close();
   }
 
 }
