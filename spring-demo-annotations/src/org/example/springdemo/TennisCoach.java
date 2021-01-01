@@ -1,12 +1,14 @@
 package org.example.springdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class TennisCoach implements Coach {
 
   @Autowired
+  @Qualifier("happyFortuneService")
   private FortuneService fortuneService;
 
   // @Autowired
@@ -14,7 +16,7 @@ public class TennisCoach implements Coach {
   // this.fortuneService = fortuneService;
   // }
 
-  public TennisCoach(FortuneService fortuneService) {
+  public TennisCoach() {
     System.out.println(">> TennisCoach: inside default constructor");
   }
 
