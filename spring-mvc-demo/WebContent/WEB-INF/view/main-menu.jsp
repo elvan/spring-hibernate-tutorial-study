@@ -15,5 +15,8 @@
   <p>
     <a href="student/showForm">Student Form</a>
   </p>
+  <p>
+    <a href="customer/showForm">Customer Form</a>
+  </p>
 </body>
 </html>
