@@ -25,7 +25,7 @@
       </form:select>
     </div>
     <div>
-      <label>Favorite Language:</label>
+      <p>Favorite Language:</p>
       <div>
         <form:radiobutton path="favoriteLanguage" value="Java" id="java" />
         <label for="java">Java</label>
@@ -43,6 +43,21 @@
       <div>
         <form:radiobutton path="favoriteLanguage" value="C#" id="csharp" />
         <label for="csharp">C#</label>
+      </div>
+    </div>
+    <div>
+      <p>Operating Systems:</p>
+      <div>
+        <form:checkbox path="operatingSystems" value="Windows" id="windows" />
+        <label for="windows">Windows</label>
+      </div>
+      <div>
+        <form:checkbox path="operatingSystems" value="MacOS" id="macos" />
+        <label for="macos">MacOS</label>
+      </div>
+      <div>
+        <form:checkbox path="operatingSystems" value="Linux" id="linux" />
+        <label for="linux">Linux</label>
       </div>
     </div>
     <div>

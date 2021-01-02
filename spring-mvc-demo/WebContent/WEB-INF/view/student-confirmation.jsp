@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
   pageEncoding="ISO-8859-1"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,5 +12,13 @@
   <div>The student is confirmed: ${student.firstName} ${student.lastName}</div>
   <div>Country: ${student.country}</div>
   <div>Favorite Language: ${student.favoriteLanguage}</div>
+  <div>
+    <p>Operating System:</p>
+    <ul>
+      <c:forEach var="os" items="${student.operatingSystems}">
+        <li>${os}</li>
+      </c:forEach>
+    </ul>
+  </div>
 </body>
 </html>
