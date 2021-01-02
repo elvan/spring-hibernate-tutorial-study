@@ -10,23 +10,44 @@
 <body>
   <h1>Student Form</h1>
   <form:form action="processForm" modelAttribute="student">
-    <p>
+    <div>
       <label>First Name:</label>
       <form:input path="firstName" />
-    </p>
-    <p>
+    </div>
+    <div>
       <label>Last Name:</label>
       <form:input path="lastName" />
-    </p>
-    <p>
+    </div>
+    <div>
       <label>Country:</label>
       <form:select path="country">
         <form:options items="${student.countryOptions}" />
       </form:select>
-    </p>
-    <p>
+    </div>
+    <div>
+      <label>Favorite Language:</label>
+      <div>
+        <form:radiobutton path="favoriteLanguage" value="Java" id="java" />
+        <label for="java">Java</label>
+      </div>
+      <div>
+        <form:radiobutton path="favoriteLanguage" value="TypeScript"
+          id="typescript" />
+        <label for="typescript">TypeScript</label>
+      </div>
+      <div>
+        <form:radiobutton path="favoriteLanguage" value="JavaScript"
+          id="javascript" />
+        <label for="javascript">JavaScript</label>
+      </div>
+      <div>
+        <form:radiobutton path="favoriteLanguage" value="C#" id="csharp" />
+        <label for="csharp">C#</label>
+      </div>
+    </div>
+    <div>
       <input type="submit" value="Submit" />
-    </p>
+    </div>
   </form:form>
 </body>
 </html>

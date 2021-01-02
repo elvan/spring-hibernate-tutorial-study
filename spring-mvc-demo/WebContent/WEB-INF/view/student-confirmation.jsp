@@ -10,5 +10,6 @@
   <h1>Student Confirmation</h1>
   <div>The student is confirmed: ${student.firstName} ${student.lastName}</div>
   <div>Country: ${student.country}</div>
+  <div>Favorite Language: ${student.favoriteLanguage}</div>
 </body>
 </html>
