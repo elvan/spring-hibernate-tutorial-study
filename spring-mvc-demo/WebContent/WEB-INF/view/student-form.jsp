@@ -19,6 +19,15 @@
       <form:input path="lastName" />
     </p>
     <p>
+      <label>Country:</label>
+      <form:select path="country">
+        <form:option value="United States" label="United States" />
+        <form:option value="Russia" label="Russia" />
+        <form:option value="Germany" label="Germany" />
+        <form:option value="Indonesia" label="Indonesia" />
+      </form:select>
+    </p>
+    <p>
       <input type="submit" value="Submit" />
     </p>
   </form:form>
