@@ -9,5 +9,6 @@
 <body>
   <h1>Hello World of Spring!</h1>
   <div>Student name: ${param.studentName}</div>
+  <div>The message: ${message}</div>
 </body>
 </html>
