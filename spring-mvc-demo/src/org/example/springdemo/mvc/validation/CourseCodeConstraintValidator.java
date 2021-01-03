@@ -18,7 +18,7 @@ public class CourseCodeConstraintValidator implements
     String theCode,
     ConstraintValidatorContext theConstraintValidatorContext
   ) {
-    return theCode.startsWith(coursePrefix);
+    return theCode != null ? theCode.startsWith(coursePrefix) : true;
   }
 
 }
