@@ -30,8 +30,14 @@
       </p>
       <p>
         <label>Free passes:</label>
-        <form:input path="freePasses"/>
+        <form:input path="freePasses" />
         <form:errors path="freePasses" cssClass="error" />
+      <p>
+      <p>
+        <label>Postal Code:</label>
+        <form:input path="postalCode" />
+        <form:errors path="postalCode" cssClass="error" />
+      </p>
       <p>
         <input type="submit" value="Submit" />
       </p>
