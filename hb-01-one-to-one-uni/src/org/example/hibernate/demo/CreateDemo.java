@@ -28,13 +28,13 @@ public class CreateDemo {
        */
 
       Instructor tempInstructor = new Instructor(
-        "Liam",
-        "James",
-        "liam-james@gmail.com"
+        "Noah",
+        "Wilson",
+        "noah.wilson@gmail.com"
       );
       InstructorDetail tempInstructorDetail = new InstructorDetail(
-        "http://www.youtube.com/LiamJames",
-        "Guitar"
+        "http://www.youtube.com/NoahWilson",
+        "Bass"
       );
 
       // associate the objects
