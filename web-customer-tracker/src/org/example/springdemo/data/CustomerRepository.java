@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class CustomerRepository implements CustomerDAO {
+public class CustomerRepository implements CustomerData {
 
   // need to inject the session factory
   @Autowired
