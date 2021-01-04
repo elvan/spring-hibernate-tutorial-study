@@ -31,11 +31,19 @@ public class EagerLazyDemo {
 
       System.out.println("Example: Instructor: " + tempInstructor);
 
-      // get courses for the instructor
+      // option 1: call getter method while session is open
       System.out.println("Example: Courses: " + tempInstructor.getCourses());
 
       // commit transaction
       session.getTransaction().commit();
+
+      // close the session
+      session.close();
+
+      System.out.println("Example: The session is now closed");
+
+      // get courses for the instructor
+      System.out.println("Example: Courses: " + tempInstructor.getCourses());
 
       System.out.println("Example: Done!");
     }
