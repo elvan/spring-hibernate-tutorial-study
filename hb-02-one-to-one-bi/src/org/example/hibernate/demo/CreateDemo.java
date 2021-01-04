@@ -21,24 +21,29 @@ public class CreateDemo {
 
     try {
       // create the objects
-      /*
-       * Instructor tempInstructor = new Instructor( "Chad", "Dary",
-       * "darby@luv2code.com" ); InstructorDetail tempInstructorDetail = new
-       * InstructorDetail( "http://www.luv2code.com/youtube", "Luv 2 code!!!" );
-       */
-
-      Instructor tempInstructor = new Instructor(
-        "Noah",
-        "Wilson",
-        "noah.wilson@gmail.com"
+      Instructor tempInstructor1 = new Instructor(
+        "Jeremy",
+        "Williams",
+        "jeremy@gmail.com"
       );
-      InstructorDetail tempInstructorDetail = new InstructorDetail(
-        "http://www.youtube.com/NoahWilson",
-        "Bass"
+      InstructorDetail tempInstructorDetail1 = new InstructorDetail(
+        "http://www.youtube.com/JeremyWilliams",
+        "Blogging"
+      );
+
+      Instructor tempInstructor2 = new Instructor(
+        "Paul",
+        "John",
+        "paul@gmail.com"
+      );
+      InstructorDetail tempInstructorDetail2 = new InstructorDetail(
+        "http://www.youtube.com/PaulJohn",
+        "Guitar"
       );
 
       // associate the objects
-      tempInstructor.setInstructorDetail(tempInstructorDetail);
+      tempInstructor1.setInstructorDetail(tempInstructorDetail1);
+      tempInstructor2.setInstructorDetail(tempInstructorDetail2);
 
       // start a transaction
       session.beginTransaction();
@@ -48,8 +53,11 @@ public class CreateDemo {
       // Note: this will ALSO save the details object
       // because of CascadeType.ALL
       //
-      System.out.println("Saving instructor: " + tempInstructor);
-      session.save(tempInstructor);
+      System.out.println("Saving instructor: " + tempInstructor1);
+      session.save(tempInstructor1);
+
+      System.out.println("Saving instructor: " + tempInstructor2);
+      session.save(tempInstructor2);
 
       // commit transaction
       session.getTransaction().commit();
