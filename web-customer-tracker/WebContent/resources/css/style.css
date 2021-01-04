@@ -9,7 +9,7 @@ table {
   border-collapse: collapse;
   border-bottom: 1px solid gray;
   font-family: Tahoma, Verdana, Segoe, sans-serif;
-  width: 72%;
+  width: 100%;
 }
 
 th {
@@ -33,33 +33,29 @@ tr:nth-child(odd) {
 }
 
 #wrapper {
-  width: 100%;
-  margin-top: 0px;
+  margin: auto;
 }
 
 #header {
-  width: 70%;
   background: #09c332;
   margin-top: 0px;
-  padding: 15px 0px 15px 15px;
 }
 
 #header h2 {
-  width: 100%;
   margin: auto;
   color: #FFFFFF;
+  padding: 15px;
 }
 
 #container {
-  width: 100%;
-  margin: auto
+  margin: auto;
 }
 
 #container h3 {
   color: #000;
 }
 
-#container #content {
+#content {
   margin-top: 20px;
 }
 

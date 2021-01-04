@@ -6,6 +6,8 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>List Customers</title>
+<link rel="stylesheet" type="text/css"
+  href="<c:url value='/resources/css/style.css' />">
 </head>
 <body>
   <div id="wrapper">
@@ -16,22 +18,18 @@
   <div id="container">
     <div id="content">
       <table>
-        <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+        </tr>
+        <c:forEach var="customer" items="${customers}">
           <tr>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Email</th>
+            <td>${customer.firstName}</td>
+            <td>${customer.lastName}</td>
+            <td>${customer.email}</td>
           </tr>
-        </thead>
-        <tbody>
-          <c:forEach var="customer" items="${customers}">
-            <tr>
-              <td>${customer.firstName}</td>
-              <td>${customer.lastName}</td>
-              <td>${customer.email}</td>
-            </tr>
-          </c:forEach>
-        </tbody>
+        </c:forEach>
       </table>
     </div>
   </div>
