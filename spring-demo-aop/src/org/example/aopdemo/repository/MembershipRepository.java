@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class MembershipRepository {
 
-  public void addAccount() {
+  public void addSillyMember() {
     System.out.println(
       getClass() + ": Doing Stuff: Adding a Membership Account"
     );

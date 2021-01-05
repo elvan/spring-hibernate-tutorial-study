@@ -26,13 +26,7 @@ public class MainDemoApp {
     accountRepository.addAccount();
 
     // call the membership business method
-    membershipRepository.addAccount();
-
-    // do it again
-    System.out.println("Let's call it again!");
-
-    // call the business method again
-    accountRepository.addAccount();
+    membershipRepository.addSillyMember();
 
     // close the context
     context.close();
