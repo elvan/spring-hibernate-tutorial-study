@@ -16,12 +16,29 @@ public class MyDemoLogginAspect {
   private void forRepositoryPackage() {
   }
 
-  @Before("forRepositoryPackage()")
-  public void beforeAddAccountAdvice() {
-    System.out.println("Executing @Before advice on a method()");
+  // create pointcut for getter methods
+  @Pointcut("execution(* org.example.aopdemo.repository.*.get*(..))")
+  private void forGetterMethods() {
   }
 
-  @Before("forRepositoryPackage()")
+  // create pointcut for setter methods
+  @Pointcut("execution(* org.example.aopdemo.repository.*.set*(..))")
+  private void forSetterMethods() {
+  }
+
+  // create pointcut include package .. exclude getter/setter
+  @Pointcut(
+    "forRepositoryPackage() && !(forGetterMethods() || forSetterMethods())"
+  )
+  public void forRepositoryNoGetterSetter() {
+  }
+
+  @Before("forRepositoryNoGetterSetter()")
+  public void beforeAddAccountAdvice() {
+    System.out.println("Executing @Before advice on method()");
+  }
+
+  @Before("forRepositoryNoGetterSetter()")
   public void performApiAnalytics() {
     System.out.println("Performing API analytics");
   }
