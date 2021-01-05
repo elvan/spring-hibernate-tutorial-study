@@ -40,7 +40,7 @@ public class DefaultCustomerRepository implements CustomerRepository {
     Session session = sessionFactory.getCurrentSession();
 
     // save the customer to db
-    session.save(customer);
+    session.saveOrUpdate(customer);
   }
 
   @Override
