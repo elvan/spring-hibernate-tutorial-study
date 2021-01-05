@@ -25,9 +25,11 @@ public class MainDemoApp {
     // call the business method
     Account account = new Account();
     accountRepository.addAccount(account, true);
+    accountRepository.doWork();
 
     // call the membership business method
     membershipRepository.addSillyMember();
+    membershipRepository.goToSleep();
 
     // close the context
     context.close();

@@ -10,4 +10,9 @@ public class AccountRepository {
     System.out.println(getClass() + ": Doing my DB work: Adding an Account");
   }
 
+  public boolean doWork() {
+    System.out.println(getClass() + ": Doing doWork() method");
+    return false;
+  }
+
 }

@@ -10,9 +10,9 @@ public class MyDemoLogginAspect {
   // this is where we add all of our related advice for logging
 
   // let's start with an @Before advice
-  @Before("execution(* add*(org.example.aopdemo.Account, ..))")
+  @Before("execution(* org.example.aopdemo.repository.*.*(..))")
   public void beforeAddAccountAdvice() {
-    System.out.println("Executing @Before advice on addAccount()");
+    System.out.println("Executing @Before advice on a method()");
   }
 
 }
