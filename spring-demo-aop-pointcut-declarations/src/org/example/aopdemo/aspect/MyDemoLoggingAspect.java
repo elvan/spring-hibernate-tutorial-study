@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-public class MyDemoLogginAspect {
+public class MyDemoLoggingAspect {
   // this is where we add all of our related advice for logging
 
   // let's start with an @Before advice
