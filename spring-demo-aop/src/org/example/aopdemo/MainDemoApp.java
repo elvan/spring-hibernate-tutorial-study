@@ -23,7 +23,8 @@ public class MainDemoApp {
     );
 
     // call the business method
-    accountRepository.addAccount();
+    Account account = new Account();
+    accountRepository.addAccount(account, true);
 
     // call the membership business method
     membershipRepository.addSillyMember();
