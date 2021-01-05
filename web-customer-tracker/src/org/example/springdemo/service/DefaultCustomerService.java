@@ -34,4 +34,10 @@ public class DefaultCustomerService implements CustomerService {
     return repository.getCustomer(id);
   }
 
+  @Override
+  @Transactional
+  public void deleteCustomer(int id) {
+    repository.deleteCustomer(id);
+  }
+
 }

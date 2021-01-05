@@ -13,4 +13,6 @@ public interface CustomerRepository {
 
   public Customer getCustomer(int id);
 
+  public void deleteCustomer(int id);
+
 }
