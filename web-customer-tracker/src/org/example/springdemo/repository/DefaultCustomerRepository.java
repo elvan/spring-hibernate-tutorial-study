@@ -21,9 +21,9 @@ public class DefaultCustomerRepository implements CustomerRepository {
     // get the current hibernate session
     Session session = sessionFactory.getCurrentSession();
 
-    // create a query
+    // create a query ... sort by last name
     Query<Customer> query = session.createQuery(
-      "from Customer",
+      "from Customer order by lastName",
       Customer.class
     );
 
