@@ -1,11 +1,10 @@
-package org.example.springdemo.data;
+package org.example.springdemo.service;
 
 import java.util.List;
 
 import org.example.springdemo.entity.Customer;
 
-// Data Access Object (DAO)
-public interface CustomerData {
+public interface CustomerService {
 
   public List<Customer> getCustomers();
 

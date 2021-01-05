@@ -1,8 +1,6 @@
-package org.example.springdemo.data;
+package org.example.springdemo.repository;
 
 import java.util.List;
-
-import javax.transaction.Transactional;
 
 import org.example.springdemo.entity.Customer;
 import org.hibernate.Session;
@@ -12,14 +10,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class CustomerRepository implements CustomerData {
+public class DefaultCustomerRepository implements CustomerRepository {
 
   // need to inject the session factory
   @Autowired
   private SessionFactory sessionFactory;
 
   @Override
-  @Transactional
   public List<Customer> getCustomers() {
     // get the current hibernate session
     Session session = sessionFactory.getCurrentSession();
