@@ -9,4 +9,6 @@ public interface CustomerRepository {
 
   public List<Customer> getCustomers();
 
+  public void saveCustomer(Customer customer);
+
 }
