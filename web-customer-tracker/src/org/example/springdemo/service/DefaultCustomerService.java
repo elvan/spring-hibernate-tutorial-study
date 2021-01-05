@@ -28,4 +28,10 @@ public class DefaultCustomerService implements CustomerService {
     repository.saveCustomer(customer);
   }
 
+  @Override
+  @Transactional
+  public Customer getCustomer(int id) {
+    return repository.getCustomer(id);
+  }
+
 }

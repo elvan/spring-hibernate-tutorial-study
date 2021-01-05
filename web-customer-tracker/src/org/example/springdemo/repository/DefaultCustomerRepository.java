@@ -43,4 +43,15 @@ public class DefaultCustomerRepository implements CustomerRepository {
     session.save(customer);
   }
 
+  @Override
+  public Customer getCustomer(int id) {
+    // get the current hibernate session
+    Session session = sessionFactory.getCurrentSession();
+
+    // now retrieve/read from database using the primary key
+    Customer customer = session.get(Customer.class, id);
+
+    return customer;
+  }
+
 }
