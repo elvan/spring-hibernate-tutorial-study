@@ -12,7 +12,7 @@ public class AroundHandleExceptionDemoApp {
   );
 
   public static void main(String[] args) {
-    // read spring config java class
+    // read spring configuration java class
     AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(
       DemoConfig.class
     );

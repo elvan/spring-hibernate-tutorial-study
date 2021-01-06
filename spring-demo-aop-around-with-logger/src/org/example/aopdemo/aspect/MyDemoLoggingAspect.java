@@ -37,10 +37,10 @@ public class MyDemoLoggingAspect {
 
     // display the method arguments
 
-    // get args
+    // get the arguments
     Object[] args = joinPoint.getArgs();
 
-    // loop through args
+    // loop through arguments
     for (Object tempArg : args) {
       logger.info("Arg: " + tempArg);
 
@@ -114,7 +114,7 @@ public class MyDemoLoggingAspect {
     String method = theProceedingJoinPoint.getSignature().toShortString();
     logger.info("Executing @Around on method: " + method);
 
-    // get begin timestamp
+    // get begin time-stamp
     long begin = System.currentTimeMillis();
 
     // execute the method
@@ -127,11 +127,11 @@ public class MyDemoLoggingAspect {
       // log the exception
       logger.warning(exc.getMessage());
 
-      // give user a custom message
-      result = "Major accident! But no worries your private helicopter is on the way!";
+      // re-throw the exception
+      throw exc;
     }
 
-    // get and timestamp
+    // get and time-stamp
     long end = System.currentTimeMillis();
 
     // compute duration and display it
@@ -142,9 +142,9 @@ public class MyDemoLoggingAspect {
   }
 
   private void convertAccountNamesToUpperCase(List<Account> result) {
-    // loop throught accounts
+    // loop through accounts
     for (Account account : result) {
-      // get uppercase version of name
+      // get upper-case version of name
       String upperName = account.getName().toUpperCase();
 
       // update the name on the account
