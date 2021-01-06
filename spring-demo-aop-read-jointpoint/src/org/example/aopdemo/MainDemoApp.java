@@ -24,6 +24,8 @@ public class MainDemoApp {
 
     // call the business method
     Account account = new Account();
+    account.setName("Aaron");
+    account.setLevel("Platinum");
     accountRepository.addAccount(account, true);
     accountRepository.doWork();
 
