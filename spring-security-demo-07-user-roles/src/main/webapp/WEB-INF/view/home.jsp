@@ -20,6 +20,11 @@
   <p>
     Roles(s): <security:authentication property="principal.authorities"/>
   </p>
+  <hr />
+  <p>
+    <a href="${pageContext.request.contextPath}/leaders">Leadership Meeting</a> (Only for Manager peeps)
+  </p>
+  <hr />
   <div>
     <form:form action="${pageContext.request.contextPath}/logout" method="post">
       <input type="submit" value="Log Out" />
