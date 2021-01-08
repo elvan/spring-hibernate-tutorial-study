@@ -24,6 +24,9 @@
   <p>
     <a href="${pageContext.request.contextPath}/leaders">Leadership Meeting</a> (Only for Manager peeps)
   </p>
+  <p>
+    <a href="${pageContext.request.contextPath}/systems">IT Systems Meeting</a> (Only for Admin peeps)
+  </p>
   <hr />
   <div>
     <form:form action="${pageContext.request.contextPath}/logout" method="post">
