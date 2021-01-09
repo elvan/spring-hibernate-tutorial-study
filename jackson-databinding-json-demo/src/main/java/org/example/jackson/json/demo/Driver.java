@@ -12,9 +12,9 @@ public class Driver {
       ObjectMapper mapper = new ObjectMapper();
 
       // read JSON file and map/convert Java POJO
-      // data/sample-lite.json
+      // data/sample-full.json
       Student student = mapper.readValue(
-        new File("data/sample-lite.json"),
+        new File("data/sample-full.json"),
         Student.class
       );
 
