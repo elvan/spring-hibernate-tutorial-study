@@ -3,6 +3,7 @@ package com.example.springboot.crud.repository;
 import java.util.List;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,20 +34,24 @@ public class JpaEmployeeRepository implements EmployeeRepository {
 
   @Override
   public Employee findById(int id) {
-    // TODO Auto-generated method stub
-    return null;
+    Employee employee = entityManager.find(Employee.class, id);
+
+    return employee;
   }
 
   @Override
   public void save(Employee employee) {
-    // TODO Auto-generated method stub
-
+    Employee savedEmployee = entityManager.merge(employee);
+    employee.setId(savedEmployee.getId());
   }
 
   @Override
   public void deleteById(int id) {
-    // TODO Auto-generated method stub
-
+    Query query = entityManager.createQuery(
+      "delete from Employee where id=:employeeId"
+    );
+    query.setParameter("employeeId", id);
+    query.executeUpdate();
   }
 
 }
