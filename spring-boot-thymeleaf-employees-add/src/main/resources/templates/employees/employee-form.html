@@ -13,15 +13,17 @@
 </head>
 <body>
   <div class="container">
-    <h3>Employee Directory</h3>
+    <h1>Employee Directory</h1>
     <hr />
-    <p class="h4 mb-4">Save Employee</p>
+    <p class="h2 mb-4">Save Employee</p>
     <form action="#" th:action="@{/employees/save}" th:object="${employee}" method="post">
       <input type="text" th:field="*{firstName}" class="form-control mb-4 col-4" placeholder="First name" />
       <input type="text" th:field="*{lastName}" class="form-control mb-4 col-4" placeholder="Last name" />
       <input type="text" th:field="*{email}" class="form-control mb-4 col-4" placeholder="Email" />
       <button type="submit" class="btn btn-info col-2">Save</button>
     </form>
+    <hr />
+    <a th:href="@{/employees/list}">Back to Employess List</a>
   </div>
 </body>
 </html>
