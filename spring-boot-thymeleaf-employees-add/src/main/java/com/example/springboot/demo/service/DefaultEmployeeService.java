@@ -23,7 +23,7 @@ public class DefaultEmployeeService implements EmployeeService {
   @Override
   @Transactional
   public List<Employee> findAll() {
-    return employeeRepository.findAll();
+    return employeeRepository.findAllByOrderByLastNameAsc();
   }
 
   @Override
