@@ -10,7 +10,7 @@
     <relativePath /> <!-- lookup parent from repository -->
   </parent>
   <groupId>com.example.springboot.demo</groupId>
-  <artifactId>spring-boot-thymeleaf-employees-add</artifactId>
+  <artifactId>spring-boot-35-thymeleaf-employees-add</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>spring-boot-thymeleaf-demo</name>
   <description>Demo project for Spring Boot</description>
