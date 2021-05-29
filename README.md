@@ -1,1 +1,1 @@
-# spring-hibernate-tutorial-study
+# spring-and-hibernate-study
